@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自然英文翻譯器</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        textarea {
+            width: 100%;
+            max-width: 600px;
+            font-size: 18px;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        #output {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            padding: 15px;
+            font-size: 18px;
+            max-width: 600px;
+        }
+    </style>
+</head>
+<body>
+    <h2>🌏 自然英文翻譯器</h2>
+    <p>請輸入中文語句，系統會自動轉換成自然流暢、適合學生的英文。</p>
+
+    <textarea id="inputText" rows="4" placeholder="輸入中文語句，例如：我昨天去了板橋車站。"></textarea>
+    <br>
+    <button onclick="generateTranslation()">翻譯成自然英文</button>
+
+    <div id="output">
+        <strong>翻譯結果：</strong>
+        <div id="translation" style="margin-top:10px;"> </div>
+    </div>
+
+    <script>
+        function generateTranslation() {
+            const input = document.getElementById("inputText").value;
+            const prompt = "Translate the following Chinese sentence into natural English and suitable for students: " + input;
+
+            // TODO: Replace this part with real API integration
+            const fakeTranslation = "(Example: I went to Banqiao Station yesterday.)";
+
+            document.getElementById("translation").innerText = fakeTranslation;
+        }
+    </script>
+</body>
+</html>
